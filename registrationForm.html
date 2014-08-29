@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
     <title>Registration Form</title>
@@ -7,91 +8,138 @@
     <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
     <script src="lib/bootstrap/js/bootstrap.js"></script>
 </head>
+
 <body>
-    <button class="btn btn-primary btn-default" data-toggle="modal" data-target="#registrationModal">Registration
-    </button>
 
-    <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <div class="container">
+        <h1 class="text-center">Registration</h1>
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+            <div class="thumbnail">
+                <div class="caption">
+                    <form class="form-horizontal " role="form">
 
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="registrationModalLabel">Registration</h4>
-                </div>
-
-                <div class="modal-body">
-                    <form class="form-horizontal" role="form">
-
-                        <div class="form-group has-feedback">
-                            <label for="inputName" class="col-sm-2 control-label">Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputName" placeholder="Name">
-                            </div>
-                        </div>
-
-                        <div class="form-group has-feedback">
-                            <label for="inputSurname" class="col-sm-2 control-label">Surname</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputSurname" placeholder="Surname">
-                            </div>
-                        </div>
-
-                        <div class="form-group has-feedback">
+                        <div class="form-group">
                             <label for="inputEmail" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-10">
                                 <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                             </div>
                         </div>
 
-                        <div class="form-group has-feedback">
+                        <div class="form-group">
                             <label for="inputPassword" class="col-sm-2 control-label">Password</label>
                             <div class="col-sm-10">
                                 <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                             </div>
                         </div>
 
-                        <div class="form-group has-feedback">
-                            <label for="inputRepeatPassword" class="col-sm-2 control-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputRepeatPassword" placeholder="Repeat Password">
-                                <span class="glyphicon glyphicon-repeat form-control-feedback"></span>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Remember me
+                                    </label>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="form-group has-feedback">
-                            <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
-                            <div class="col-sm-10">
-                                <input type="tel" class="form-control" id="inputPhone" placeholder="Phone">
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success btn-default">Sign in</button>
+                                <button type="button" class="btn btn-info btn-default" data-toggle="modal" data-target="#registrationModal">Registration
+                                </button>
                             </div>
-                        </div>
-
-                        <div class="col-xs-4 col-md-offset-2">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    Student
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="">
-                                Teacher
-                            </label>
                         </div>
 
                     </form>
                 </div>
+            </div>
+        </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-success">Sign In</button>
+        <!-- Modal window -->
+        <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title" id="registrationModalLabel">Registration</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+
+                            <div class="form-group has-feedback">
+                                <label for="inputRegistrationName" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputRegistrationName" placeholder="Name">
+                                </div>
+                            </div>
+
+                            <div class="form-group has-feedback">
+                                <label for="inputRegistrationSurname" class="col-sm-2 control-label">Surname</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputRegistrationSurname" placeholder="Surname">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputRegistrationEmail" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputRegistrationEmail" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="form-group has-feedback">
+                                <label for="inputRegistrationPassword" class="col-sm-2 control-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="inputRegistrationPassword" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10 col-sm-offset-2">
+                                    <input type="password" class="form-control" id="inputRegistrationRepeatPassword" placeholder="Repeat Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group has-feedback">
+                                <label for="inputRegistrationPhone" class="col-sm-2 control-label">Phone</label>
+                                <div class="col-sm-10">
+                                    <input type="tel" class="form-control" id="inputRegistrationPhone" placeholder="Phone">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2 col-md-offset-2">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionStudent" value="option1" checked>Student
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-1 col-md-offset-1">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionTeacher" value="option2">Teacher
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-warning">Sign In</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
+
 </html>
