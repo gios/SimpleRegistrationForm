@@ -1,10 +1,22 @@
 {
-	"student": {
-		"email": "student@gmail.com",
+	"students": [{
+		"email": "shrek@gmail.com",
 		"password": 1
-	},
-	"teacher": {
-		"email": "teacher@gmail.com",
+	}, {
+		"email": "fiona@gmail.com",
 		"password": 2
-	}
+	}, {
+		"email": "kot@gmail.com",
+		"password": 3
+	}],
+	"teachers": [{
+		"email": "teacher1@gmail.com",
+		"password": 1
+	}, {
+		"email": "teacher2@gmail.com",
+		"password": 2
+	}, {
+		"email": "teacher3@gmail.com",
+		"password": 3
+	}]
 }

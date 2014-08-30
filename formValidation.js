@@ -8,12 +8,20 @@ $(document).ready(function() {
 			success: function(data) {
 				var json = $.parseJSON(data);
 
-				if ($("#inputEmail").val() === json.student.email && parseInt($("#inputPassword").val()) === json.student.password) {
-					$("#alertBox div").html("<div class='alert alert-success' role='alert'>Correct," + " Student " + json.student.email + "!</div>");
-				} else if($("#inputEmail").val() === json.teacher.email && parseInt($("#inputPassword").val()) === json.teacher.password) {
-					$("#alertBox div").html("<div class='alert alert-success' role='alert'>Correct," + " Teacher " + json.teacher.email + "!</div>");
-				} else {
-					$("#alertBox div").html("<div class='alert alert-danger' role='alert'>Login and password are Incorrect!</div>");
+				for (var i = 0; i <= Object.keys(json.students).length - 1; i++) {
+					if (($("#inputEmail").val() === json.students[i].email) && (parseInt($("#inputPassword").val()) === json.students[i].password)) {
+						$("#alertBox div").html("<div class='alert alert-success' role='alert'>Correct," + " Student " + json.students[i].email + "!</div>");
+						break;
+					} else {
+						for (var j = 0; j <= Object.keys(json.teachers).length - 1; j++) {
+							if (($("#inputEmail").val() === json.teachers[j].email) && (parseInt($("#inputPassword").val()) === json.teachers[j].password)) {
+								$("#alertBox div").html("<div class='alert alert-success' role='alert'>Correct," + " Teacher " + json.teachers[j].email + "!</div>");
+								break;
+							} else {
+								$("#alertBox div").html("<div class='alert alert-danger' role='alert'>Login and password are Incorrect!</div>");
+							}
+						}
+					}
 				}
 			}
 		});
