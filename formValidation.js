@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-	$("#submitButton").click(function() {
+	$.getJSON("data.json", {
+		format: "json"
+	}).done(function(json) {
 
-		$.getJSON("data.json", {
-			format: "json"
-		}).done(function(json) {
+		$("#submitButton").click(function() {
 
 			for (var i = 0; i <= Object.keys(json.students).length - 1; i++) {
 				if (($("#inputEmail").val() === json.students[i].email) && (parseInt($("#inputPassword").val()) === json.students[i].password)) {
@@ -21,9 +21,10 @@ $(document).ready(function() {
 					}
 				}
 			}
-		}).fail(function(jqxhr, textStatus, error) {
-			var err = textStatus + ", " + error;
-			console.log("Request Failed: " + err);
 		});
+
+	}).fail(function(jqxhr, textStatus, error) {
+		var err = textStatus + ", " + error;
+		console.log("Request Failed: " + err);
 	});
 });
