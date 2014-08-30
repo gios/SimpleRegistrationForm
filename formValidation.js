@@ -7,11 +7,11 @@ $(document).ready(function() {
 			dataType: "text",
 			success: function(data) {
 				var json = $.parseJSON(data);
-				console.log(json.student.email);
-				console.log(json.student.password);
 
 				if ($("#inputEmail").val() === json.student.email && parseInt($("#inputPassword").val()) === json.student.password) {
-					$("#alertBox div").html("<div class='alert alert-success' role='alert'>Login and password are Correct!</div>");
+					$("#alertBox div").html("<div class='alert alert-success' role='alert'>Correct," + " Student " + json.student.email + "!</div>");
+				} else if($("#inputEmail").val() === json.teacher.email && parseInt($("#inputPassword").val()) === json.teacher.password) {
+					$("#alertBox div").html("<div class='alert alert-success' role='alert'>Correct," + " Teacher " + json.teacher.email + "!</div>");
 				} else {
 					$("#alertBox div").html("<div class='alert alert-danger' role='alert'>Login and password are Incorrect!</div>");
 				}
