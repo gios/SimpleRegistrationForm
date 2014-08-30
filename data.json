@@ -1,0 +1,10 @@
+{
+	"student": {
+		"email": "student@gmail.com",
+		"password": 1
+	},
+	"teacher": {
+		"email": "teacher@gmail.com",
+		"password": 2
+	}
+}
